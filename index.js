@@ -101,7 +101,7 @@ async function wizard() {
                 read(),type()
                 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API);
                 async function ask(query) {
-                  const model = genAI.getGenerativeModel({ model: "gemini-pro-vision"});
+                  const model = genAI.getGenerativeModel({ model: "gemini-pro"});
                   const result = await model.generateContent(query);
                   const response = await result.response;
                   const text = response.text();
